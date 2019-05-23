@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh '''mvn --version
 java -version'''
+        tool(name: 'maven', type: 'maven')
       }
     }
     stage('git') {
