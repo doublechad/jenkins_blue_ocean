@@ -3,9 +3,8 @@ pipeline {
   stages {
     stage('version check') {
       steps {
-        sh '''mvn --version
-java -version'''
         tool(name: 'maven', type: 'maven')
+        sh 'mvn --vesion'
       }
     }
     stage('git') {
